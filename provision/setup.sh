@@ -36,3 +36,5 @@ debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Si
 apt-get install -y postfix >> /vagrant/provision.log
 service postfix reload >> /vagrant/provision.log
 
+echo "[vagrant provisioning] Installing Git..."
+apt-get install -y git git-core >> /vagrant/provision.log

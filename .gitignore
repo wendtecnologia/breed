@@ -1,2 +1,8 @@
-.vagrant
+# Vagrant folder
+.vagrant/
+
+# Don't ignore .gitkeep in any folder
 !**/.gitkeep
+
+# Log file
+provision.log

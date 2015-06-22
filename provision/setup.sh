@@ -44,3 +44,7 @@ apt-get install -y php5-common php5-cli php5-fpm >> /vagrant/provision.log
 
 echo "[vagrant provisioning] Installing PHP Extensions..."
 apt-get install -y curl php5-curl php5-gd php5-imagick php5-intl php5-mbstring php5-mcrypt php5-xdebug php5-xmlrpc >> /vagrant/provision.log
+
+echo "[vagrant provisioning] Installing Composer..."
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer

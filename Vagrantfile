@@ -1,4 +1,5 @@
 Vagrant.configure(2) do |config|
+
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.network "private_network", ip: "192.168.56.100"
@@ -8,6 +9,9 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "./www", "/var/www"
   
   config.vm.provider "virtualbox" do |v|
-    v.name = "Development Enviroment for PHP 5.6"
+    v.name = "Development Environment for PHP 5.6"
   end
+
+  config.vm.provision :shell, path: "provision/setup.sh"
+
 end

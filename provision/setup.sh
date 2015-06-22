@@ -29,3 +29,10 @@ fi
 echo "[dev4php provisioning] Updating & Upgrading OS..."
 apt-get update  >> /vagrant/provision.log
 apt-get upgrade -y  >> /vagrant/provision.log
+
+echo -n "[vagrant provisioning] Installing postfix, mailutils..."
+debconf-set-selections <<< "postfix postfix/mailname string $HOSTNAME"
+debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+apt-get install -y postfix >> /vagrant/provision.log
+service postfix reload >> /vagrant/provision.log
+

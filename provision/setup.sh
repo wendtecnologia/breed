@@ -38,3 +38,7 @@ service postfix reload >> /vagrant/provision.log
 
 echo "[vagrant provisioning] Installing Git..."
 apt-get install -y git git-core >> /vagrant/provision.log
+
+echo "[vagrant provisioning] Installing PHP..."
+apt-get install -y php5-common php5-cli php5-fpm >> /vagrant/provision.log
+

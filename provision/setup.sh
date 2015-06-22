@@ -16,6 +16,16 @@ export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8
 dpkg-reconfigure locales
 
+echo "[vagrant provisioning] Configuring SWAP..."
+grep -q "swapfile" /etc/fstab
+if [ $? -ne 0 ]; then
+fallocate -l 1024M /swapfile >> /vagrant/provision.log
+chmod 600 /swapfile >> /vagrant/provision.log
+mkswap /swapfile >> /vagrant/provision.log
+swapon /swapfile >> /vagrant/provision.log
+echo '/swapfile none swap defaults 0 0' >> /etc/fstab
+fi
+
 echo "[dev4php provisioning] Updating & Upgrading OS..."
 apt-get update  >> /vagrant/provision.log
 apt-get upgrade -y  >> /vagrant/provision.log

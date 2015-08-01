@@ -14,14 +14,10 @@ hostname $HOSTNAME >> /vagrant/provision.log
 . os/swap.sh     ## enable swapfile
 . os/update.sh   ## update & upgrade OS
 
-echo -n "[dev4php provisioning] Installing postfix, mailutils..."
-debconf-set-selections <<< "postfix postfix/mailname string $HOSTNAME"
-debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
-apt-get install -y postfix >> /vagrant/provision.log
-service postfix reload >> /vagrant/provision.log
-
-echo "[dev4php provisioning] Installing Git..."
-apt-get install -y git git-core >> /vagrant/provision.log
+### Tools
+. tools/postfix.sh  ## configure postfix
+. tools/git.sh      ## configure git
+#. tools/svn.sh     ## configure subversion
 
 echo "[dev4php provisioning] Installing PHP..."
 apt-get install -y php5-common php5-cli php5-fpm >> /vagrant/provision.log

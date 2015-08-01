@@ -15,9 +15,9 @@ hostname $HOSTNAME >> /vagrant/provision.log
 . os/update.sh   ## update & upgrade OS
 
 ### Tools
-. tools/postfix.sh  ## configure postfix
-. tools/git.sh      ## configure git
-#. tools/svn.sh     ## configure subversion
+. tool/postfix.sh  ## configure postfix
+. tool/git.sh      ## configure git
+#. tool/svn.sh     ## configure subversion
 
 echo "[dev4php provisioning] Installing PHP..."
 apt-get install -y php5-common php5-cli php5-fpm >> /vagrant/provision.log

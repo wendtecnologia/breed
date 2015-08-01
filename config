@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+###
+# Project: DEV4PHP
+# Author: Walker de Alencar (@walkeralencar)
+###
+
+VERSION=`cat ../VERSION` ### Version project
+HOSTNAME=php.dev         ### define hostname for server
+SWAPSIZE=1024M           ### Define swap file size. default: 1024M

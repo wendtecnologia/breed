@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 ###
-# Project: DEV4PHP
-# Author: Walker de Alencar (@walkeralencar)
-###
+# @package  DEV4PHP
+# @category OS
+# @author   Walker de Alencar <@walkeralencar>
+##
 
-echo "[dev4php provisioning] Pre-configuring locale..."
+echo "[DEV4PHP] Pre-configuring locale..."
 export DEBIAN_FRONTEND=noninteractive
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8

@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 ###
-# Project: DEV4PHP
-# Author: Walker de Alencar (@walkeralencar)
-###
+# @package  DEV4PHP
+# @author   Walker de Alencar <@walkeralencar>
+##
 
-. ../config
+. /vagrant/config
 echo "[DEV4PHP] Development EnVironment for PHP v$VERSION"
-
 hostname $HOSTNAME >> /vagrant/provision.log
 
+cd /vagrant/provision
 ### OS - Operational System
-. os/locale.sh   ## set locale to UTF-8
-. os/swap.sh     ## enable swapfile
-. os/update.sh   ## update & upgrade OS
+. os/locale.sh      ## set locale to UTF-8
+. os/swap.sh        ## enable swapfile
+. os/update.sh      ## update & upgrade OS
 
 ### Tools
-. tool/postfix.sh  ## configure postfix
-. tool/git.sh      ## configure git
-#. tool/svn.sh     ## configure subversion
+. tool/postfix.sh   ## install postfix
+. tool/git.sh       ## install git
+#. tool/svn.sh       ## install subversion
 
 echo "[dev4php provisioning] Installing PHP..."
 apt-get install -y php5-common php5-cli php5-fpm >> /vagrant/provision.log

@@ -4,6 +4,6 @@
 # Author: Walker de Alencar (@walkeralencar)
 ###
 
-VERSION=`cat ../VERSION` ### Version project
-HOSTNAME=php.dev         ### define hostname for server
-SWAPSIZE=1024M           ### Define swap file size. default: 1024M
+VERSION=`cat /vagrant/VERSION` ## Version project
+HOSTNAME=php.dev               ## Define hostname for server, need to change in './Vagrantfile' too
+SWAPSIZE=1024M                 ## Define swap file size. default: 1024M

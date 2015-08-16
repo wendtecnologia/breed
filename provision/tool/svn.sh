@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 ###
-# Project: DEV4PHP
-# Author: Walker de Alencar (@walkeralencar)
-###
+# @package  DEV4PHP
+# @category Tools
+# @author   Walker de Alencar <@walkeralencar>
+##
 
-echo "[dev4php provisioning] Installing Subversion..."
+echo "[DEV4PHP] Installing Subversion..."
 apt-get install -y subversion >> /vagrant/provision.log

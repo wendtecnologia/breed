@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 ###
-# Project: DEV4PHP
-# Author: Walker de Alencar (@walkeralencar)
-###
+# @package  DEV4PHP
+# @category OS
+# @author   Walker de Alencar <@walkeralencar>
+##
 
-echo "[dev4php provisioning] Updating & Upgrading OS..."
+echo "[DEV4PHP] Updating & Upgrading OS..."
 apt-get update  >> /vagrant/provision.log
 apt-get upgrade -y  >> /vagrant/provision.log

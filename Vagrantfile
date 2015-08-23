@@ -26,6 +26,8 @@ Vagrant.configure(2) do |config|
       v.name = "Development EnVironment for PHP"
   end
 
+  config.vm.provision "shell", inline: 'echo \'LC_ALL="en_US.UTF-8"\' > /etc/default/locale'
+
   ## Fix tty msg error by @robmachado
   config.vm.provision "fix-no-tty", type: "shell" do |s|
       s.privileged = false

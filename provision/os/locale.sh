@@ -7,8 +7,9 @@
 
 echo "[DEV4PHP] Pre-configuring locale..."
 export DEBIAN_FRONTEND=noninteractive
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
-dpkg-reconfigure locales
+echo "export LANGUAGE=en_US.UTF-8" >> /etc/.profile
+echo "export LANG=en_US.UTF-8" >> /etc/.profile
+echo "export LC_ALL=en_US.UTF-8" >> /etc/.profile
+. /etc/.profile
+locale-gen en_US.UTF-8   >> /vagrant/provision.log
+dpkg-reconfigure locales >> /vagrant/provision.log

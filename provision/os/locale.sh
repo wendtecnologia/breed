@@ -6,7 +6,6 @@
 ##
 
 echo "[DEV4PHP] Pre-configuring locale..."
-export DEBIAN_FRONTEND=noninteractive
 echo "export LANGUAGE=en_US.UTF-8" >> /etc/.profile
 echo "export LANG=en_US.UTF-8" >> /etc/.profile
 echo "export LC_ALL=en_US.UTF-8" >> /etc/.profile

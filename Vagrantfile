@@ -19,8 +19,12 @@ Vagrant.configure(2) do |config|
   end
 
   ## Change between private or public access to you machine.
-  #config.vm.network "private_network", ip: "10.0.0.100"
-  config.vm.network "public_network", ip: "10.0.0.100"
+  config.vm.network "private_network", ip: "192.168.50.4"
+  config.vm.network "public_network"
+
+  ## Site specific data to be served by the system
+  ## http://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/srv.html
+  config.vm.synced_folder "./srv", "/srv"
 
   config.vm.provider "virtualbox" do |v|
       v.name = "Development EnVironment for PHP"

@@ -19,6 +19,10 @@ cd /vagrant/provision
 . tool/git.sh       ## install git
 #. tool/svn.sh       ## install subversion
 
+### Webserver
+#. webserver/apache.sh ## install apache
+. webserver/nginx.sh  ## install nginx
+
 ### PHP
 . php/basic.sh      ## install php5
 #. php/dev.sh        ## install php5 module development

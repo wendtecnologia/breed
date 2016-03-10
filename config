@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ###
-# @package  DEV4PHP
+# @package  breed
 # @author   Walker de Alencar <@walkeralencar>
 ##
 
@@ -9,5 +9,5 @@ export DEBIAN_FRONTEND=noninteractive
 
 ## Configurations
 VERSION=`cat /vagrant/VERSION` ## Version project
-HOSTNAME=php.dev               ## Define hostname for server, need to change in './Vagrantfile' too
+HOSTNAME=breed.vm              ## Define hostname for server, need to change in './Vagrantfile' too
 SWAPSIZE=1024M                 ## Define swap file size. default: 1024M

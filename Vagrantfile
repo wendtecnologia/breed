@@ -1,5 +1,5 @@
 ###
-# @package  DEV4PHP
+# @package  breed
 # @author   Walker de Alencar <@walkeralencar>
 # @author   Roberto L. Machado <@robmachado>
 ##
@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   ## need to change $HOSTNAME in './config" if you change here
-  config.vm.hostname = "php.dev"
+  config.vm.hostname = "breed.vm"
 
   ## Configure cached packages to be shared between instances of the same base box.
   ## More info on http://fgrehm.viewdocs.io/vagrant-cachier/usage
@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
   end
 
   ## Change between private or public access to you machine.
-  config.vm.network "private_network", ip: "192.168.50.4"
+  config.vm.network "private_network", ip: "192.168.50.10"
   config.vm.network "public_network"
 
   ## Site specific data to be served by the system
@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "./srv", "/srv"
 
   config.vm.provider "virtualbox" do |v|
-      v.name = "Development EnVironment for PHP"
+      v.name = "breed"
   end
 
   config.vm.provision "shell", inline: 'echo \'LC_ALL="en_US.UTF-8"\' > /etc/default/locale'
@@ -39,5 +39,4 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :shell, path: "provision/setup.sh"
-
 end

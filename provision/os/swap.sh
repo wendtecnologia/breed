@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 ###
-# @package  DEV4PHP
+# @package  breed
 # @category OS
 # @author   Walker de Alencar <@walkeralencar>
 ##
 
-echo "[DEV4PHP] Configuring SWAP..."
+echo "[breed] Configuring SWAP..."
 grep -q "swapfile" /etc/fstab
 if [ $? -ne 0 ]; then
   fallocate -l $SWAPSIZE /swapfile >> /vagrant/provision.log

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 ###
-# @package  DEV4PHP
+# @package  breed
 # @author   Walker de Alencar <@walkeralencar>
 ##
 
 . /vagrant/config
-echo "[DEV4PHP] Development EnVironment for PHP v$VERSION"
+echo "[breed] BReed Easy Environment for Developers v$VERSION"
 hostname $HOSTNAME >> /vagrant/provision.log
 
 cd /vagrant/provision
@@ -25,4 +25,4 @@ cd /vagrant/provision
 . php/extensions.sh ## install php5 extensions
 . php/composer.sh   ## install composer globally (depends extensions.sh)
 
-echo "[DEV4PHP] Completed"
+echo "[breed] Completed"

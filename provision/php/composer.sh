@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 ###
-# @package  DEV4PHP
+# @package  breed
 # @category PHP
 # @author   Walker de Alencar <@walkeralencar>
 ##
 
-echo "[DEV4PHP] Installing Composer..."
+echo "[breed] Installing Composer..."
 curl -sS -4 https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer

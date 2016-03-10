@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 ###
-# @package  DEV4PHP
+# @package  breed
 # @category OS
 # @author   Walker de Alencar <@walkeralencar>
 ##
 
-echo "[DEV4PHP] Pre-configuring locale..."
+echo "[breed] Pre-configuring locale..."
 echo "export LANGUAGE=en_US.UTF-8" >> /etc/.profile
 echo "export LANG=en_US.UTF-8" >> /etc/.profile
 echo "export LC_ALL=en_US.UTF-8" >> /etc/.profile
